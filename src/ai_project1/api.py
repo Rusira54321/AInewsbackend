@@ -55,7 +55,6 @@ app.add_middleware(
 )
 class TopicRequest(BaseModel):
     topic: str
-    current_year: str = "2025"
 
 @app.get("/")
 async def root():
@@ -91,7 +90,7 @@ async def generate_news(request: TopicRequest):
         # Prepare inputs for the crew
         inputs = {
             'topic': request.topic,
-            'current_year': request.current_year,
+            'current_year': str(datetime.now().year),
             'filename': filename
         }
         
