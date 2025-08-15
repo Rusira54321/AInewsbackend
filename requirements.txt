@@ -1,7 +1,10 @@
-fastapi==0.116.1
-uvicorn[standard]==0.35.0
-pydantic==2.11.7
+fastapi==0.110.0
+uvicorn==0.29.0
 crewai==0.159.0
 crewai-tools==0.62.0
-python-dotenv
-pypdf==5.9.0
+pydantic==2.6.4
+python-dotenv==1.0.1
+requests==2.31.0
+beautifulsoup4==4.12.3
+lxml==5.1.0
+fpdf==1.7.2
