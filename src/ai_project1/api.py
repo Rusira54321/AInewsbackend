@@ -48,7 +48,7 @@ except ImportError as e:
 app = FastAPI(title="AI News Generator API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ai-news-generator-frontend-69x4vhkzr-rusira-dinujayas-projects.vercel.app"],  # Or your frontend URL
+    allow_origins=["*"],  # Or your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
