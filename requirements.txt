@@ -3,10 +3,10 @@
 fastapi>=0.110.0,<0.111.0
 uvicorn>=0.29.0,<0.30.0
 
-# AI & CrewAI (using stable versions for Python 3.11 compatibility)
-# Using versions that are compatible and have fewer dependency conflicts
-crewai==0.120.0
-crewai-tools==0.55.0
+# AI & CrewAI (using conservative versions for Python 3.11 compatibility)
+# Using versions that are definitely available and have fewer dependency conflicts
+crewai==0.95.0
+crewai-tools==0.40.0
 
 # Data parsing & scraping
 requests>=2.31.0,<3.0.0

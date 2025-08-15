@@ -8,11 +8,11 @@ pypika>=0.48.0,<0.49.0
 numpy>=1.21.0,<2.0.0
 pandas>=1.3.0,<2.0.0
 
-# Additional constraints for stability
+# Additional constraints for stability (compatible with crewai 0.108.0)
 openai>=0.28.0,<1.0.0
 tiktoken>=0.5.0,<1.0.0
 
-# Specific constraints for crewai 0.120.0 compatibility
+# Specific constraints for crewai 0.108.0 compatibility
 aiohttp>=3.8.0,<4.0.0
 httpx>=0.24.0,<1.0.0
 
