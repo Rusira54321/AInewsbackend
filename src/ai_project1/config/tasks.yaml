@@ -1,0 +1,35 @@
+search_news_task:
+  description: >
+    Conduct a thorough research about {topic}
+    Make sure you find any interesting and relevant information given
+    the current year is {current_year}.
+  expected_output: >
+    A list of 10 websites with the most relevant information about {topic}
+  agent: search_news
+
+scraper_task:
+  description: >
+    Scrape the website for the latest news and information
+  expected_output: >
+    Fully scraped websites with all the important information from the website.
+  agent: scraper_news
+
+ai_newsWriter_task:
+  description: >
+    Summarize and synthesize the scraped information into a single,
+    PDF-ready news article. The article should be well structured
+    (title, subtitle, sections, summary) and formatted as plain text
+    suitable for direct conversion into a PDF (no Markdown fences).
+    use simple english.
+  expected_output: >
+    A single string containing the complete article text ready for PDF generation.
+  agent: ai_news_writer
+
+file_write_task:
+  description: >
+    Write the news article to a PDF file named '{filename}.pdf'.
+    The PDF will be saved in the 'news/' folder using the file_writer tool.
+    Use the filename '{filename}' when calling the file_writer tool.
+  expected_output: >
+    A fully fledged news article saved as a PDF named '{filename}.pdf' in the 'news/' directory.
+  agent: file_Writer
