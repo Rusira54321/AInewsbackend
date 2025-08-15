@@ -4,7 +4,7 @@ from pydantic import BaseModel
 import os
 from datetime import datetime
 from dotenv import load_dotenv
-
+from fastapi.middleware.cors import CORSMiddleware
 # Load environment variables first
 # Try to find .env file in different locations
 env_paths = [
@@ -46,7 +46,12 @@ except ImportError as e:
     CREW_AVAILABLE = False
 
 app = FastAPI(title="AI News Generator API", version="1.0.0")
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://ai-news-generator-frontend-69x4vhkzr-rusira-dinujayas-projects.vercel.app"],  # Or your frontend URL
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 class TopicRequest(BaseModel):
     topic: str
     current_year: str = "2025"
